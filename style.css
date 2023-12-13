@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&family=Poppins:wght@500;600;700&family=Shantell+Sans:wght@400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(https://plus.unsplash.com/premium_photo-1684331678124-ff62c82cef7a?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+
+}
+
+.todo-app {
+    width: 50dvw;
+    height: 30%;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.5rem;
+    border: 2px solid white;
+}
+
+.todo-app h2 {
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    margin: 20px  0 10px 20px;
+
+
+}
+
+.row {
+    height: 3rem;
+    width: 90%;
+    background: rgba(198, 194, 194, 0.779);
+    margin-left: 20px;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+#input-box {
+
+    flex: 1;
+    padding: 0 50px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 500;
+
+}
+
+.btn {
+    padding: 16px 40px;
+    border-radius: 3rem;
+    border: none;
+    outline: none;
+    background: rgb(255, 111, 0);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+ul li {
+    list-style:none;
+    font-size: 17px ;
+    padding: 12px 8px 12px 60px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    font-family: 'Poppins';
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px ;
+    width: 28px ;
+    border: 50%;
+    background-image: url(./images/unchecked.png);
+    background-size : cover;
+    background-position: center;
+    top: 12px ;
+    left: 20px;
+}
+.checked{
+    text-decoration: line-through;
+    color: #555;
+}
+.checked::before{
+    background-image: url(./images/checked.png);
+}
+ul li span{
+    position: absolute;
+    right: 50px;
+    font-size: 22px;
+    top : 5px ;
+    width: 40px ;
+    height: 40px;
+    color: #555;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li span:hover{
+    background-color: rgba(195, 178, 178, 0.344);
+}
